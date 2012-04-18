@@ -15,31 +15,86 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="DTo-mo-UYv">
-                                <rect key="frame" x="85" y="394" width="150" height="9"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="ejp-VN-evz">
+                                <rect key="frame" x="18" y="332" width="232" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="progressTintColor" red="1" green="0.22954022769487215" blue="0.17053940581526794" alpha="1" colorSpace="calibratedRGB"/>
-                            </progressView>
-                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="lJ9-Ub-aru">
-                                <rect key="frame" x="85" y="406" width="150" height="9"/>
+                                <accessibility key="accessibilityConfiguration" label="redSlider"/>
+                                <color key="minimumTrackTintColor" red="1" green="0.035351606611024211" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="maximumTrackTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="thumbTintColor" red="1" green="0.035351606610000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="updateColor:" destination="dYd-YI-0mE" eventType="valueChanged" id="ydf-EO-QUG"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="Zpq-KS-MWh">
+                                <rect key="frame" x="18" y="362" width="232" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="progressTintColor" red="0.020336561593379709" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </progressView>
-                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="TR5-CY-aXD">
-                                <rect key="frame" x="85" y="418" width="150" height="9"/>
+                                <accessibility key="accessibilityConfiguration" label="greenSlider"/>
+                                <color key="minimumTrackTintColor" red="0.0" green="1" blue="0.032178035061964039" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="maximumTrackTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="thumbTintColor" red="0.0" green="1" blue="0.032178035059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="updateColor:" destination="dYd-YI-0mE" eventType="valueChanged" id="d6r-Kc-aQm"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="ZQR-1W-Ea1">
+                                <rect key="frame" x="18" y="392" width="232" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </progressView>
+                                <accessibility key="accessibilityConfiguration" label="blueSlider"/>
+                                <color key="maximumTrackTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="thumbTintColor" red="0.0" green="0.51575659834871423" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="updateColor:" destination="dYd-YI-0mE" eventType="valueChanged" id="H2B-GF-kPI"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Red" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Jh0-Q0-4CS">
+                                <rect key="frame" x="256" y="332" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="Green" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="ufw-qi-ma7">
+                                <rect key="frame" x="256" y="362" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" text="Blue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="vtl-98-Cnw">
+                                <rect key="frame" x="256" y="392" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" maximumValue="1" stepValue="0.01" id="xek-3Z-YfH">
+                                <rect key="frame" x="11" y="422" width="94" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <action selector="updateColor:" destination="dYd-YI-0mE" eventType="valueChanged" id="UCG-jl-Nh6"/>
+                                </connections>
+                            </stepper>
+                            <stepper opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" maximumValue="1" stepValue="0.01" id="hyp-a4-lbL">
+                                <rect key="frame" x="113" y="422" width="94" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <action selector="updateColor:" destination="dYd-YI-0mE" eventType="valueChanged" id="Nsc-13-FT5"/>
+                                </connections>
+                            </stepper>
+                            <stepper opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" maximumValue="1" stepValue="0.01" id="e0W-m1-pxg">
+                                <rect key="frame" x="215" y="422" width="94" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <action selector="updateColor:" destination="dYd-YI-0mE" eventType="valueChanged" id="rMG-1R-4Xg"/>
+                                </connections>
+                            </stepper>
                         </subviews>
                         <connections>
                             <outlet property="delegate" destination="dYd-YI-0mE" id="fQd-RJ-zId"/>
                         </connections>
                     </glkView>
                     <navigationItem key="navigationItem" id="673-De-GSI"/>
-                    <connections>
-                        <outlet property="bluePV" destination="TR5-CY-aXD" id="DuR-8m-xJ2"/>
-                        <outlet property="greenPV" destination="lJ9-Ub-aru" id="Abf-Wb-1kc"/>
-                        <outlet property="redPV" destination="DTo-mo-UYv" id="ME5-EP-rcV"/>
-                    </connections>
                 </glkViewController>
             </objects>
             <point key="canvasLocation" x="-120" y="259"/>
@@ -49,12 +104,8 @@
         <class className="MyGLViewController" superclassName="GLKViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MyGLViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="blueSlider" candidateClass="UISlider"/>
+                <relationship kind="action" name="updateColor:"/>
                 <relationship kind="outlet" name="colors" candidateClass="NSArray"/>
-                <relationship kind="outlet" name="greenPV" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="greenSlider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="redPV" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="redSlider" candidateClass="UISlider"/>
             </relationships>
         </class>
     </classes>

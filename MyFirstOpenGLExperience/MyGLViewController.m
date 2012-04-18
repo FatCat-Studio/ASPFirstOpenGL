@@ -17,24 +17,19 @@
 
 @implementation MyGLViewController
 @synthesize context=_context;
-@dynamic colors;
-@synthesize redPV = _redPV;
-@synthesize greenPV = _greenPV;
-@synthesize bluePV = _bluePV;
 
-- (NSArray*)colors{
-	NSMutableArray *colors=[NSMutableArray arrayWithCapacity:3];
-	for (int i=0; i<3; ++i){
-		[colors addObject:[NSNumber numberWithFloat:_colors[i]]];
+- (IBAction)updateColor:(id)sender{
+	_colors[[sender tag]]=[(NSNumber*)[sender valueForKey:@"value"] floatValue];
+	for (UIControl *ptr in [[self view]subviews]) {
+		if ([ptr respondsToSelector:NSSelectorFromString(@"value")])
+			[ptr setValue:[NSNumber numberWithFloat:_colors[[ptr tag]]] forKey:@"value"];
+		else if ([ptr respondsToSelector:NSSelectorFromString(@"setText:")]) {
+			[(UILabel*)ptr setText:[NSString stringWithFormat:@"%.2f",_colors[[ptr tag]]]];
+		}
 	}
-	return colors;
+	
 }
 
-- (void)setColors:(NSArray *)colors{
-	for (int i=0; i<3; ++i){
-		_colors[i]=[(NSNumber*)[colors objectAtIndex:i] floatValue];
-	}
-}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -55,19 +50,17 @@
 	GLKView *view = (GLKView *)self.view;
     view.context = self.context;
 	for (int i=0;i<3;++i)
-		_colors[i]=(rand() % 10) / 10.0;
+		_colors[i]=0.5;
 }
 
 - (void)viewDidUnload
 {
-	[self setRedPV:nil];
-	[self setGreenPV:nil];
-	[self setBluePV:nil];
     [super viewDidUnload];
     if ([EAGLContext currentContext] == self.context) {
         [EAGLContext setCurrentContext:nil];
     }
-    self.context = nil;}
+    self.context = nil;
+}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -83,23 +76,7 @@
 }
 
 - (void)update {
-	for (int i=0;i<3;++i){
-		if (_increasing[i])
-			_colors[i] += 1.0 * self.timeSinceLastUpdate;
-		else
-			_colors[i] -= 1.0 * self.timeSinceLastUpdate;
-		if (_colors[i]>=1.0){
-			_colors[i]=1.0;
-			_increasing[i]=NO;
-		}
-		if (_colors[i]<=0.0){
-			_colors[i]=0.0;
-			_increasing[i]=YES;
-		}
-	}
-	_redPV.progress=_colors[0];
-	_greenPV.progress=_colors[1];
-	_bluePV.progress=_colors[2];
+	
 }
 
 @end
