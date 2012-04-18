@@ -1,0 +1,279 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		58A40E5115265637004D238A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A40E5015265637004D238A /* UIKit.framework */; };
+		58A40E5315265637004D238A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A40E5215265637004D238A /* Foundation.framework */; };
+		58A40E5515265637004D238A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A40E5415265637004D238A /* CoreGraphics.framework */; };
+		58A40E5B15265637004D238A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 58A40E5915265637004D238A /* InfoPlist.strings */; };
+		58A40E5D15265637004D238A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A40E5C15265637004D238A /* main.m */; };
+		58A40E6115265637004D238A /* ASPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A40E6015265637004D238A /* ASPAppDelegate.m */; };
+		58A40E6815265777004D238A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A40E6715265777004D238A /* QuartzCore.framework */; };
+		58A40E6A1526577F004D238A /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A40E691526577F004D238A /* GLKit.framework */; };
+		58A40E6C15265789004D238A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A40E6B15265789004D238A /* OpenGLES.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		58A40E4C15265637004D238A /* MyFirstOpenGLExperience.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFirstOpenGLExperience.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		58A40E5015265637004D238A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		58A40E5215265637004D238A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		58A40E5415265637004D238A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		58A40E5815265637004D238A /* MyFirstOpenGLExperience-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyFirstOpenGLExperience-Info.plist"; sourceTree = "<group>"; };
+		58A40E5A15265637004D238A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		58A40E5C15265637004D238A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		58A40E5E15265637004D238A /* MyFirstOpenGLExperience-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyFirstOpenGLExperience-Prefix.pch"; sourceTree = "<group>"; };
+		58A40E5F15265637004D238A /* ASPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASPAppDelegate.h; sourceTree = "<group>"; };
+		58A40E6015265637004D238A /* ASPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASPAppDelegate.m; sourceTree = "<group>"; };
+		58A40E6715265777004D238A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		58A40E691526577F004D238A /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		58A40E6B15265789004D238A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		58A40E4915265637004D238A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58A40E6C15265789004D238A /* OpenGLES.framework in Frameworks */,
+				58A40E6A1526577F004D238A /* GLKit.framework in Frameworks */,
+				58A40E6815265777004D238A /* QuartzCore.framework in Frameworks */,
+				58A40E5115265637004D238A /* UIKit.framework in Frameworks */,
+				58A40E5315265637004D238A /* Foundation.framework in Frameworks */,
+				58A40E5515265637004D238A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		58A40E4115265637004D238A = {
+			isa = PBXGroup;
+			children = (
+				58A40E5615265637004D238A /* MyFirstOpenGLExperience */,
+				58A40E4F15265637004D238A /* Frameworks */,
+				58A40E4D15265637004D238A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		58A40E4D15265637004D238A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				58A40E4C15265637004D238A /* MyFirstOpenGLExperience.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		58A40E4F15265637004D238A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58A40E6B15265789004D238A /* OpenGLES.framework */,
+				58A40E691526577F004D238A /* GLKit.framework */,
+				58A40E6715265777004D238A /* QuartzCore.framework */,
+				58A40E5015265637004D238A /* UIKit.framework */,
+				58A40E5215265637004D238A /* Foundation.framework */,
+				58A40E5415265637004D238A /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		58A40E5615265637004D238A /* MyFirstOpenGLExperience */ = {
+			isa = PBXGroup;
+			children = (
+				58A40E5F15265637004D238A /* ASPAppDelegate.h */,
+				58A40E6015265637004D238A /* ASPAppDelegate.m */,
+				58A40E5715265637004D238A /* Supporting Files */,
+			);
+			path = MyFirstOpenGLExperience;
+			sourceTree = "<group>";
+		};
+		58A40E5715265637004D238A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				58A40E5815265637004D238A /* MyFirstOpenGLExperience-Info.plist */,
+				58A40E5915265637004D238A /* InfoPlist.strings */,
+				58A40E5C15265637004D238A /* main.m */,
+				58A40E5E15265637004D238A /* MyFirstOpenGLExperience-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		58A40E4B15265637004D238A /* MyFirstOpenGLExperience */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58A40E6415265637004D238A /* Build configuration list for PBXNativeTarget "MyFirstOpenGLExperience" */;
+			buildPhases = (
+				58A40E4815265637004D238A /* Sources */,
+				58A40E4915265637004D238A /* Frameworks */,
+				58A40E4A15265637004D238A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyFirstOpenGLExperience;
+			productName = MyFirstOpenGLExperience;
+			productReference = 58A40E4C15265637004D238A /* MyFirstOpenGLExperience.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		58A40E4315265637004D238A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "MIPT iLab";
+			};
+			buildConfigurationList = 58A40E4615265637004D238A /* Build configuration list for PBXProject "MyFirstOpenGLExperience" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 58A40E4115265637004D238A;
+			productRefGroup = 58A40E4D15265637004D238A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				58A40E4B15265637004D238A /* MyFirstOpenGLExperience */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		58A40E4A15265637004D238A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58A40E5B15265637004D238A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		58A40E4815265637004D238A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58A40E5D15265637004D238A /* main.m in Sources */,
+				58A40E6115265637004D238A /* ASPAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		58A40E5915265637004D238A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				58A40E5A15265637004D238A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		58A40E6215265637004D238A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		58A40E6315265637004D238A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		58A40E6515265637004D238A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyFirstOpenGLExperience/MyFirstOpenGLExperience-Prefix.pch";
+				INFOPLIST_FILE = "MyFirstOpenGLExperience/MyFirstOpenGLExperience-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		58A40E6615265637004D238A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyFirstOpenGLExperience/MyFirstOpenGLExperience-Prefix.pch";
+				INFOPLIST_FILE = "MyFirstOpenGLExperience/MyFirstOpenGLExperience-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		58A40E4615265637004D238A /* Build configuration list for PBXProject "MyFirstOpenGLExperience" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58A40E6215265637004D238A /* Debug */,
+				58A40E6315265637004D238A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58A40E6415265637004D238A /* Build configuration list for PBXNativeTarget "MyFirstOpenGLExperience" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58A40E6515265637004D238A /* Debug */,
+				58A40E6615265637004D238A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 58A40E4315265637004D238A /* Project object */;
+}
