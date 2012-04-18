@@ -15,21 +15,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-	_curRed=0;
-	_increasing=YES;
-	EAGLContext * context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
-	GLKView *view = [[GLKView alloc] initWithFrame:[[UIScreen mainScreen] bounds]]; 
-    view.context = context; 
-    view.delegate = (id)self; 
-	GLKViewController * viewController = [[GLKViewController alloc] initWithNibName:nil bundle:nil]; // 1
-    viewController.view = view; // 2
-    viewController.delegate = self; // 3
-    viewController.preferredFramesPerSecond = 60; // 4
-    self.window.rootViewController = viewController; // 5
-	
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+	srand(time(NULL));
     return YES;
 }
 
@@ -72,26 +58,6 @@
 	 */
 }
 
-- (void)glkView:(GLKView *)view drawInRect:(CGRect)rect {
-    glClearColor(_curRed, 0.0, 0.0, 1.0);
-    glClear(GL_COLOR_BUFFER_BIT);
-	
-}
 
-- (void)glkViewControllerUpdate:(GLKViewController *)controller {
-    if (_increasing) {
-        _curRed += 1.0 * controller.timeSinceLastUpdate;
-    } else {
-        _curRed -= 1.0 * controller.timeSinceLastUpdate;
-    }
-    if (_curRed >= 1.0) {
-        _curRed = 1.0;
-        _increasing = NO;
-    }
-    if (_curRed <= 0.0) {
-        _curRed = 0.0;
-        _increasing = YES;
-    }
-}
 
 @end

@@ -10,10 +10,7 @@
 #import <GLKit/GLKit.h>
 
 //Отписались, что мы отвечаем требованиям протокола GLKViewDelegate
-@interface ASPAppDelegate : UIResponder <UIApplicationDelegate,GLKViewDelegate,GLKViewControllerDelegate>{
-	GLfloat _curRed;
-	GLboolean _increasing;
-}
+@interface ASPAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58280D91153ED5540068C86B /* MyGLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58280D90153ED5540068C86B /* MyGLViewController.m */; };
+		586D0BF1153ED74A005C548E /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 586D0BF0153ED74A005C548E /* Storyboard.storyboard */; };
 		58A40E5115265637004D238A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A40E5015265637004D238A /* UIKit.framework */; };
 		58A40E5315265637004D238A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A40E5215265637004D238A /* Foundation.framework */; };
 		58A40E5515265637004D238A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A40E5415265637004D238A /* CoreGraphics.framework */; };
@@ -19,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58280D8F153ED5540068C86B /* MyGLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyGLViewController.h; sourceTree = "<group>"; };
+		58280D90153ED5540068C86B /* MyGLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyGLViewController.m; sourceTree = "<group>"; };
+		586D0BF0153ED74A005C548E /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		58A40E4C15265637004D238A /* MyFirstOpenGLExperience.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFirstOpenGLExperience.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58A40E5015265637004D238A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		58A40E5215265637004D238A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -86,6 +91,9 @@
 			children = (
 				58A40E5F15265637004D238A /* ASPAppDelegate.h */,
 				58A40E6015265637004D238A /* ASPAppDelegate.m */,
+				58280D8F153ED5540068C86B /* MyGLViewController.h */,
+				58280D90153ED5540068C86B /* MyGLViewController.m */,
+				586D0BF0153ED74A005C548E /* Storyboard.storyboard */,
 				58A40E5715265637004D238A /* Supporting Files */,
 			);
 			path = MyFirstOpenGLExperience;
@@ -154,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				58A40E5B15265637004D238A /* InfoPlist.strings in Resources */,
+				586D0BF1153ED74A005C548E /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +175,7 @@
 			files = (
 				58A40E5D15265637004D238A /* main.m in Sources */,
 				58A40E6115265637004D238A /* ASPAppDelegate.m in Sources */,
+				58280D91153ED5540068C86B /* MyGLViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
