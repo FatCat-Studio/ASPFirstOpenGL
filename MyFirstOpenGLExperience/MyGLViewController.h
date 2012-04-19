@@ -8,12 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <GLKit/GLKit.h>
-@interface MyGLViewController : GLKViewController 
-@property () IBOutlet NSArray *colors;
-@property (weak, nonatomic) IBOutlet UIProgressView *redPV;
-@property (weak, nonatomic) IBOutlet UIProgressView *greenPV;
-@property (weak, nonatomic) IBOutlet UIProgressView *bluePV;
-
-
-
+@interface MyGLViewController : GLKViewController
+@property (strong, nonatomic) IBOutlet UILabel *FPS;
 @end
