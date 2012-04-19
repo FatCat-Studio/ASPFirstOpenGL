@@ -149,5 +149,13 @@ const GLubyte Indices[] = {
 	self.effect.transform.modelviewMatrix = modelViewMatrix;
 	[_FPS setText:[NSString stringWithFormat:@"%d",[self framesPerSecond]]];
 }
+#pragma Mark Interactions
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+	NSLog(@"timeSinceLastUpdate: %f", self.timeSinceLastUpdate);
+	NSLog(@"timeSinceLastDraw: %f", self.timeSinceLastDraw);
+	NSLog(@"timeSinceFirstResume: %f", self.timeSinceFirstResume);
+	NSLog(@"timeSinceLastResume: %f", self.timeSinceLastResume);
+    self.paused = !self.paused;
+}
 
 @end
