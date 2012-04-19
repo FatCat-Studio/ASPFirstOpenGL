@@ -105,7 +105,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MyGLViewController.h"/>
             <relationships>
                 <relationship kind="action" name="updateColor:"/>
-                <relationship kind="outlet" name="colors" candidateClass="NSArray"/>
             </relationships>
         </class>
     </classes>
